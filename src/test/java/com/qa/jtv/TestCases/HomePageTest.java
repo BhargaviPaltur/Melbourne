@@ -25,6 +25,7 @@ public class HomePageTest extends BaseClass {
 	{
 		h.goToCreateAccountPage();
 		System.out.println("lemme try");
+		System.out.println("lemme see");
 	}
 	@AfterMethod
 	public void teardown()
