@@ -29,6 +29,7 @@ public class HomePageTest extends BaseClass {
 	public void teardown()
 	{
 		driver.quit();
+		System.out.println("browser closed");
 	}	
 	
 	
