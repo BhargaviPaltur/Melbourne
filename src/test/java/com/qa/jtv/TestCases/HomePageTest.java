@@ -24,15 +24,12 @@ public class HomePageTest extends BaseClass {
 	public void goToCreatePage()
 	{
 		h.goToCreateAccountPage();
-		System.out.println("lemme try");
-	
-		System.out.println("Finally its happening from eclipse too");
+
 	}
 	@AfterMethod
 	public void teardown()
 	{
-		driver.quit();
-		System.out.println("browser closed");
+
 	}	
 	
 	
