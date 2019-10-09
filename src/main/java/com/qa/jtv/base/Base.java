@@ -11,22 +11,29 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Base {
-	static Properties prop;
-	static WebDriver driver;
+	public static Properties prop;
+	public static WebDriver driver;
 	
-	public Base() throws FileNotFoundException
+	public Base() 
 	{
-		prop=new Properties();
-		FileInputStream fis= new FileInputStream("C:\\Melbourne\\Melbourne\\src\\main\\java\\com\\qa\\jtv\\base\\config.properties");
+		
+		
 		try {
+			prop=new Properties();
+			FileInputStream fis = new FileInputStream("C:\\Melbourne\\Melbourne\\src\\main\\java\\com\\qa\\jtv\\base\\config.properties");
 			prop.load(fis);
-		} catch (IOException e) {
+		} catch (FileNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		 catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
-	 public static void initialize()
-	 {
+	 
+	public static void start()
+	{
 		if(prop.getProperty("browser").equalsIgnoreCase("chrome"))
 		{
 			System.setProperty("webDriver.chrome.driver","./driver/chromedriver.exe");
@@ -41,6 +48,7 @@ public class Base {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		
-	 }
+		
+	}
 
 }
