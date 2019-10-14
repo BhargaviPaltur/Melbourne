@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Base {
@@ -37,7 +38,9 @@ public class Base {
 		if(prop.getProperty("browser").equalsIgnoreCase("chrome"))
 		{
 			System.setProperty("webDriver.chrome.driver","./driver/chromedriver.exe");
-			driver=new ChromeDriver();
+			//ChromeOptions options = new ChromeOptions();
+			//options.setExperimentalOption("useAutomationExtension", false);
+			 driver = new ChromeDriver();
 		}
 		if(prop.getProperty("browser").equalsIgnoreCase("firefox"))
 		{

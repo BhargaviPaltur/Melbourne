@@ -8,12 +8,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Try {
 
 	public static void main(String[] args) throws AWTException {
 		System.setProperty("webdriver.chrome.driver","./driver/chromedriver.exe");
-		WebDriver driver=new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.setExperimentalOption("useAutomationExtension", false);
+		WebDriver driver = new ChromeDriver(options);
 		driver.get("https://www.jtv.com");
 		driver.manage().window().maximize();
 		

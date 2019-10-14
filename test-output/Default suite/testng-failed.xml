@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.qa.jtv.TestCases.Home_PageTest">
+      <class name="com.qa.jtv.TestCases.CreateAccount_PageTest">
         <methods>
-          <include name="goingToCategoryPage"/>
+          <include name="checkTitle"/>
+          <include name="tearDown"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.qa.jtv.TestCases.Home_PageTest -->
+      </class> <!-- com.qa.jtv.TestCases.CreateAccount_PageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
