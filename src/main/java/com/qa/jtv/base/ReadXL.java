@@ -12,14 +12,14 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ReadXL {
 	static XSSFWorkbook wb;
-	public static Object[][] getTestData() 
+	public static Object[][] getTestData(String sheet_name) 
 	{
 		FileInputStream fis=null;
 		try {
-			 fis=new FileInputStream("C:\\Melbourne\\Melbourne\\src\\main\\java\\com\\qa\\jtv\\base\\dataDriven.xlsx");
+			 fis=new FileInputStream("C:\\Melbourne\\Melbourne\\Resources\\dataDriven.xlsx");
 		    }
 			catch (FileNotFoundException e) 
-			{
+		{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
@@ -33,7 +33,7 @@ public class ReadXL {
 				}
 		
 			
-				Sheet s1=wb.getSheet("Sheet1");
+				Sheet s1=wb.getSheet(sheet_name);
 				Object[][] data=new Object[s1.getLastRowNum()][s1.getRow(0).getLastCellNum()];
 				for(int i=0;i<s1.getLastRowNum();i++)
 				{

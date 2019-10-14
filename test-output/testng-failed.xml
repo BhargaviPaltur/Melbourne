@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [JTV]" allow-return-values="true">
+<suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.qa.jtv.TestCases.CreateAccount_PageTest">
+      <class name="com.qa.jtv.TestCases.LoginPage_Test">
         <methods>
-          <include name="checkTitle"/>
-          <include name="tearDown"/>
+          <include name="letsLogin"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.qa.jtv.TestCases.CreateAccount_PageTest -->
+      </class> <!-- com.qa.jtv.TestCases.LoginPage_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [JTV] -->
+</suite> <!-- Failed suite [Default suite] -->

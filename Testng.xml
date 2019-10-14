@@ -5,13 +5,17 @@
  <Listner classname="Utility.ScreenShot"/>
 </Listeners>
   <test name="Default test">
+  <parameter name= "f" value="param"/>
+  <parameter name= "l" value="param2"/>
+  <parameter name= "e" value="param@gmail.com"/>
+  <parameter name= "p" value="1023456789"/>
+  <parameter name= "pa" value="test123"/>
+  <parameter name= "cpa" value="test123" />
+  
     <classes>
-      <class name="com.qa.jtv.TestCases.Home_PageTest">
-        <methods>
-          <include name="goingToCategoryPage"/>
-          <include name="setup"/>
-        </methods>
-      </class> 
+      <!-- <class name="com.qa.jtv.TestCases.Home_PageTest"/> -->            
+       <!-- <class name="com.qa.jtv.TestCases.CreateAccount_PageTest"/> -->
+          <class name="com.qa.jtv.TestCases.LoginPage_Test"/> 
     </classes>
   </test> 
 </suite> 

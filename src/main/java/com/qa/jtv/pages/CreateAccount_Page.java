@@ -21,8 +21,6 @@ public CreateAccount_Page()
 {
 	PageFactory.initElements(driver,this);
 }
-
-	
 	
 	public String verifyTitle()
 	{
@@ -30,13 +28,8 @@ public CreateAccount_Page()
 		return t;
 	}
 	
-	//public void createUser(String fn1, String ln1, String email1, String phone1, String pass1, String cpass1)
-	
-
-
-
-	public void createUser(String fn2, String ln2, String email2, String phone2, String pass2, String cpass2) {
-		{
+	public void createUser(String fn2, String ln2, String email2, String phone2, String pass2, String cpass2) 
+	{
 			fn.sendKeys(fn2);
 			ln.sendKeys(ln2);
 			email.sendKeys(email2);
@@ -44,10 +37,9 @@ public CreateAccount_Page()
 			pass.sendKeys(pass2);
 			cpass.sendKeys(cpass2);
 			createButton.click();
-			
-		}
 		
 	}
+	
 	
 
 }

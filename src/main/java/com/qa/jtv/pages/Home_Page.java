@@ -19,7 +19,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.qa.jtv.base.Base;
 public class Home_Page extends Base {	
 	
-
+	@FindBy(xpath="//a[contains(text(),'Sign in to see your information')]") WebElement signIn;
 	@FindBy(xpath="//div[@class='account-menu']")WebElement w;
 	@FindBy(xpath="//a[text()='Create an Account']") WebElement createAccount;
 	@FindBy(xpath="//a[@href='/clearance/_/N-2619281658']") WebElement clearance;
@@ -58,6 +58,23 @@ public class Home_Page extends Base {
 	    r.mouseMove(x+20,y+130);
 		driver.switchTo().activeElement();
 		createAccount.click();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+	}
+	public void goToLoginPage()
+	{
+		try 
+		{
+		int x= (w.getLocation().getX());
+		int y= (w.getLocation().getY());
+		Robot r=new Robot();
+	    r.mouseMove(x+20,y+130);
+		driver.switchTo().activeElement();
+		signIn.click();
 		}
 		catch(Exception e)
 		{

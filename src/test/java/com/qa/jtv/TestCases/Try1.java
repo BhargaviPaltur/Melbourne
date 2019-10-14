@@ -23,5 +23,6 @@ public class Try1 {
 			driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 			
 	}
+	
 
 }
