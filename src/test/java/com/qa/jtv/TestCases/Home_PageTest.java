@@ -33,13 +33,19 @@ public class Home_PageTest extends Base {
 	}
 	
 	
-	@Test
+	@Test(enabled=false)
 	public Category_Page goingToCategoryPage()
 	{
 	   hp.goToCategoryPage();
 	   cap=new Category_Page();
 	   Assert.assertEquals(cap.verifyTitle(),"Clearance Jewelry | J.com");
 	   return cap;
+	}
+	
+	@Test
+	public void clickfooterlink()
+	{
+		hp.footerLinks();
 	}
 
 

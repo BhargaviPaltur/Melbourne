@@ -16,6 +16,7 @@ public class Try1 {
 	{
 		System.setProperty("webDriver.chrome.driver","./driver/chromedriver.exe");
 		
+		//li[text()='Shop']/..
 		WebDriver driver = new ChromeDriver();
 			driver.get("https://www.facebook.com");
 			Assert.assertEquals(driver.getTitle(),"abc");

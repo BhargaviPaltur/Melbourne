@@ -18,6 +18,7 @@ public class Try {
 		options.setExperimentalOption("useAutomationExtension", false);
 		WebDriver driver = new ChromeDriver(options);
 		driver.get("https://www.jtv.com");
+		List<WebElement>links = driver.findElements(By.xpath("//li[text()='Shop']/.."));
 		driver.manage().window().maximize();
 		
 		WebElement e= driver.findElement(By.xpath("//a[@href='/clearance/_/N-2619281658']"));

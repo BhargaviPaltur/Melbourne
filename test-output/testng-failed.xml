@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.qa.jtv.TestCases.LoginPage_Test">
+      <class name="com.qa.jtv.TestCases.Try2">
         <methods>
-          <include name="letsLogin"/>
-          <include name="setup"/>
+          <include name="multipleWindow"/>
         </methods>
-      </class> <!-- com.qa.jtv.TestCases.LoginPage_Test -->
+      </class> <!-- com.qa.jtv.TestCases.Try2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,24 +1,23 @@
 package com.qa.jtv.pages;
 
 import java.awt.AWTException;
-import java.awt.List;
-import java.awt.RenderingHints.Key;
+import java.util.Iterator;
+import java.util.List;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import com.qa.jtv.base.Base;
-public class Home_Page extends Base {	
-	
+public class Home_Page extends Base {
+		
 	@FindBy(xpath="//a[contains(text(),'Sign in to see your information')]") WebElement signIn;
 	@FindBy(xpath="//div[@class='account-menu']")WebElement w;
 	@FindBy(xpath="//a[text()='Create an Account']") WebElement createAccount;
@@ -27,6 +26,11 @@ public class Home_Page extends Base {
 	@FindBy(xpath="//button[@id='facet-title-price_range']/span[@class='icon icon-plus']") WebElement plusButton;
 	@FindBy(xpath= "//div[@data-dim='price_range']/div")WebElement price;
 	@FindBy(xpath="//div[@class='modal-close']") WebElement modalClose;
+	@FindBy(xpath= "//li[text()='Shop']/..")  List<WebElement> flinks;
+	
+	
+	
+		
 /*
 	   @FindBys({
 		@FindBy(how=How.XPATH, using="//div[@data-dim='price_range']/div[1]"),
@@ -104,6 +108,45 @@ public class Home_Page extends Base {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+	}
+	
+	public void footerLinks()
+	{ 
+		Iterator<WebElement> i = flinks.iterator();
+		while (i.hasNext())
+		{
+			WebElement value= i.next();
+			System.out.println(value.getText());
+			if(value.getText().equals("Earrings"))
+{
+	value.click();
+}
+		}
+		/*
+		for(WebElement w:flinks)
+		{
+			//System.out.println(w.getText());
+			if(w.getAttribute("title").equals("Earrings"))
+			{
+				
+				w.click();
+			}
+		}
+		*/
+		
+		/*
+		for(int i=0; i<flinks.size();i++)
+		{
+			WebElement w=flinks.get(i);
+			System.out.println("the footer links are"+ w.getAttribute("title"));
+			if(w.getAttribute("title").equals("Earrings"))
+			{
+				w.click(); 
+			}
+			
+		}*/
+		
 		
 	}
 }

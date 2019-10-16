@@ -1,5 +1,6 @@
 package com.qa.jtv.TestCases;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -21,14 +22,23 @@ public class LoginPage_Test extends Base {
 		lp=new Login_Page();
 	}
 	
-	@Test(dataProvider="getData")
+	@Test(dataProvider="getData",enabled=false)
 	public void letsLogin(String email, String password)
 	{
 		hp.goToLoginPage();
 		lp.login(email, password);
+		Assert.assertEquals(lp.verifyTitle(),"Account Home | JTV.com" );
 		
 	}
 	
+	@Test(dataProvider="getData")
+	public void letsEmailSignup(String email, String password)
+	{
+		hp.goToLoginPage();
+		lp.emailSignup(email, password);
+		Assert.assertEquals(lp.verifyTitle(),"Account Home | JTV.com" );
+		
+	}
 	
 	@DataProvider
 	public Object[][] getData()
