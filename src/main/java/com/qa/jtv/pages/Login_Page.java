@@ -48,6 +48,23 @@ public class Login_Page extends Base {
 		
 	}
 	
+	public void singleLogin()
+	{
+		email.sendKeys("aaa@gmail.com");
+		password.sendKeys("password123");
+		signInButton.click();
+		try {
+		    Robot r = new Robot();
+			r.keyPress(KeyEvent.VK_ESCAPE);
+			r.keyRelease(KeyEvent.VK_ESCAPE);
+		} catch (AWTException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		
+	}
+	
 	public void emailSignup(String em, String pwd) {
 		email.sendKeys(em);
 		password.sendKeys(pwd);
